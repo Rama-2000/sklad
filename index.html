@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Складская система</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Складская система</h1>
+
+    <table id="inventory">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Название товара</th>
+                <th>Описание</th>
+                <th>Цена</th>
+                <th>Количество</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Здесь будут отображаться данные из базы данных -->
+        </tbody>
+    </table>
+
+    <form id="addItemForm">
+        <h2>Добавить товар</h2>
+        <label for="itemName">Название товара:</label>
+        <input type="text" id="itemName" name="itemName" required>
+
+        <label for="itemDescription">Описание:</label>
+        <input type="text" id="itemDescription" name="itemDescription" required>
+
+        <label for="itemPrice">Цена:</label>
+        <input type="number" id="itemPrice" name="itemPrice" min="0" required>
+
+        <label for="itemQuantity">Количество:</label>
+        <input type="number" id="itemQuantity" name="itemQuantity" min="0" required>
+
+        <button type="button" onclick="addItem()">Добавить товар</button>
+    </form>
+
+    <script src="./main.js"></script>
+</body>
+</html>
